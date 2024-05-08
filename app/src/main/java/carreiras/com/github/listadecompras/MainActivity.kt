@@ -42,6 +42,7 @@ class MainActivity : ComponentActivity() {
             editText.text.clear()
         }
 
+        /**O LiveData no ViewModel é observado. Quando os dados mudam, a lista de itens no Adapter é atualizada.*/
         viewModel.itemsLiveData.observe(this) { items ->
             itemsAdapter.updateItems(items)
         }
